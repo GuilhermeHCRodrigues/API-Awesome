@@ -30,41 +30,19 @@ def conversorMoeda(valor, opcao, moeda):
 
     if opcao == 1:
         resultado = cotacao * valor
-        print (f"{resultado:.2f}" )
+
+        if moeda == "BTCBRL":
+            print (f"{resultado:.9f}" )
+        else:
+            print (f"{resultado:.2f}" )
 
     elif opcao == 2:
         resultado = valor / cotacao
-        print(f"{resultado:.2f}")
+
+        if moeda == "BTCBRL":
+            print (f"{resultado:.9f}" )
+        else:
+            print (f"{resultado:.2f}" )
 
     return resultado
             
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# #   Imprimir o resultado da requisição
-# if requisicao.status_code == 200:
-
-#     dicionario = requisicao.json() # transformar o resultado da requisição em um dicionário
-
-#     print(f"USD: {dicionario['USDBRL']['bid']}") # imprimir o valor do dólar em reais
-#     print(f"EUR: {dicionario['EURBRL']['bid']}") # imprimir o valor do euro em reais
-
-# else:
-#     print("Erro na requisição:", requisicao.status_code)
-
-
-
